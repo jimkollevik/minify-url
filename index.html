@@ -1,11 +1,46 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>javascript list exercise</title>
+	<title>javascript list exercise</title>
+	<meta charset="utf-8">
+	<meta content="exercise to create a list with CRUD funtions">
 </head>
-
 <body>
-The content of the document......
-</body>
 
-</html> 
+	<!-- to do -->
+	<!--
+		1. Input field
+		2. submit to list
+		3. delete item
+	-->
+
+	<!-- form here -->
+	<form action="#" id="inputForm">
+		<input type="item" name="item-input" id="input" value="e.g eggs, milk etc">
+		<input type="submit" name="submit" id="submit" onclick="getItem()">
+	</form>
+
+	<div class="list-container">
+		<ul id="list">
+			
+		</ul><!-- end list -->
+	</div><!-- end list -->
+
+<script type="text/javascript">
+	//get value with funtion
+
+	function getItem(e) {
+		var item = document.getElementById("input").value;
+		var ul = document.getElementById("list");
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode(item));
+		ul.appendChild(li);
+
+		var form = document.getElementById("inputForm");
+	function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+	}
+</script>
+
+</body>
+</html>
