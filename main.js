@@ -13,8 +13,8 @@ function geturl() {
 }
 
 function getrandom() {
-	var randomstring = Math.random().toString(32).subString(2, 5) + Math.random().toString(32).subString(2, 5);
-  return randomstring()
+	var random_string = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
+  return random_string()
 }
 
 function genhash() {
