@@ -1,4 +1,4 @@
-var endpoint = "https://jsonkeeper.com/b/TT0V";
+var endpoint = "https://api.npoint.io/d325efb6423de5e504a9";
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
