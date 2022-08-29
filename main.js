@@ -1,4 +1,4 @@
-var endpoint = "https://api.npoint.io/23de676e4b56c629e4d4";
+var endpoint = "https://api.jsonbin.it";
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
@@ -30,7 +30,7 @@ function genhash() {
 function send_request(url) {
 	this.url = url;
   	$.ajax({
-    	'url': endpoint,
+    	'url': endpoint + "/" + window.location.hash.substr(1),
       'type': 'POST',
       'data': JSON.stringify(this.url),
       'dataType': 'json',
