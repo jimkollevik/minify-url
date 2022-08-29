@@ -13,8 +13,12 @@ function geturl() {
 }
 
 function getrandom() {
-	var random_string = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
-  return random_string()
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
 }
 
 function genhash() {
