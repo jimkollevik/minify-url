@@ -1,4 +1,4 @@
-var endpoint = "https://api.npoint.io/f78f9847edd6efef19fa";
+var endpoint = "https://api.npoint.io/23de676e4b56c629e4d4";
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
