@@ -30,7 +30,7 @@ function genhash() {
 function send_request(url) {
 	this.url = url;
   	$.ajax({
-    	'url': endpoint + "/" + window.location.hash.substr(1),
+    	'url': endpoint,
       'type': 'POST',
       'data': JSON.stringify(this.url),
       'dataType': 'json',
