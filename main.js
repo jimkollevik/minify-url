@@ -1,4 +1,5 @@
 var endpoint = "https://api.jsonbin.it";
+var proxy = "https://cors-anywhere.herokuapp.com/";
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
@@ -30,7 +31,7 @@ function genhash() {
 function send_request(url) {
 	this.url = url;
   	$.ajax({
-    	'url': endpoint + "/" + window.location.hash.substr(1),
+    	'url': proxy + endpoint + "/" + window.location.hash.substr(1),
       'type': 'POST',
       'data': JSON.stringify(this.url),
       'dataType': 'json',
