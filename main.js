@@ -1,4 +1,4 @@
-var endpoint = "https://api.npoint.io/d325efb6423de5e504a9";
+var endpoint = "https://api.jsonstores.com/AA881541393665888256c6EY";
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
