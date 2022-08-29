@@ -1,8 +1,4 @@
 var endpoint = "https://api.npoint.io/f78f9847edd6efef19fa";
-function getrandom() {
-	var randomstring = Math.random().toString(32).subString(2, 5) + Math.random().toString(32).subString(2, 5);
-  return randomstring()
-}
 
 function geturl() {
  var url = document.getElementById("urlinput").value;
@@ -14,6 +10,11 @@ function geturl() {
   else {
   return url;
   }
+}
+
+function getrandom() {
+	var randomstring = Math.random().toString(32).subString(2, 5) + Math.random().toString(32).subString(2, 5);
+  return randomstring()
 }
 
 function genhash() {
@@ -40,6 +41,7 @@ function shorturl() {
 }
 
 var hashh = window.location.hash.substr(1)
+
 if(window.location.hash !="") {
 	$.getJSON(endpoint + "/" + hashh, function(data){
   	data = data["result"];
