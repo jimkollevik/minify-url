@@ -34,7 +34,7 @@ function send_request(url) {
       'type': 'POST',
       'data': JSON.stringify(this.url),
       'dataType': 'json',
-      'contentType': 'application/json: charset=utf-8'
+      'contentType': 'application/json; charset=utf-8'
     })
 }
 
