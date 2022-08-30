@@ -29,19 +29,23 @@ function genhash() {
 
 function send_request(url) {
 
+//new code
+	
+
 let xhr = new XMLHttpRequest()
 
-let myObj = {name:"Steve Jobs", company:"Apple"};                                            
+let myObj = {url:endpoint + "/" + window.location.hash.substr(1)};                                            
 xhr.addEventListener('load', () => {    
 	if (xhr.readyState === 4 && xhr.status === 200) {
         console.log(xhr.responseText)
     }                                      
 })
                                             
-let url =   https://api.jsonstores.com/5679096778206781440wJqSH/user
+let url =   endpoint + "/" + window.location.hash.substr(1)
 xhr.open('POST', url, false)
                                         
 xhr.send(JSON.stringify(myObj))
+//end new code
 }
 
 function shorturl() {
