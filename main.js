@@ -20,5 +20,9 @@ function geturl() {
       			console.log(xhr.responseText);
    		}};
 		console.log("Success")
+	  $.getJSON(url, function(data) {
+		  var uri = data.result.short_link;
+		  console.log(uri)
+	  }
   }
 }
