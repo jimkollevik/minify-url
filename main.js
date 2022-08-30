@@ -28,14 +28,20 @@ function genhash() {
 }
 
 function send_request(url) {
-    this.url = url;
-    $.ajax({
-        'url': endpoint + "/" + window.location.hash.substr(1),
-        'type': 'POST',
-        'data': JSON.stringify(this.url),
-        'dataType': 'json',
-        'contentType': 'application/json; charset=utf-8'
+
+let xhr = new XMLHttpRequest()
+
+let myObj = {name:"Steve Jobs", company:"Apple"};                                            
+xhr.addEventListener('load', () => {    
+	if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(xhr.responseText)
+    }                                      
 })
+                                            
+let url =   https://api.jsonstores.com/5679096778206781440wJqSH/user
+xhr.open('POST', url, false)
+                                        
+xhr.send(JSON.stringify(myObj))
 }
 
 function shorturl() {
