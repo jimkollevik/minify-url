@@ -24,5 +24,5 @@ function geturl() {
 		  var uri = data.result.short_link;
 		  console.log(uri)
 	  }
-  }
+  })
 }
