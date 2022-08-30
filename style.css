@@ -1,37 +1,4 @@
-html, body {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
-
-button {
-	margin: auto;
-	position: relative;
-	display: block;
-	font-weight: 100;
-	background: #ffffff; 
-	border: 1px solid rgba(#000, 1);
-	text-decoration: none;
-	color: #000;
-	padding: 15px 20px;
-	transition: .225s ease all;
-	overflow: hidden;
-	will-change: transform;
-	box-shadow: 3px 3px 0px rgba(#000, 0.5);
-}
-
-:hover, :focus {
-		cursor: pointer;
-		transform: translate(-4px, -4px);
-		box-shadow: 7px 7px 0px rgba(#000, 0.3);
-		color: black;
-}
-
-.clicked {
-		cursor: pointer;
-		transform: translate(3px, 3px) !important;
-		box-shadow: 0px 0px 0px rgba(#000, 1) !important;
-		border: 1px solid rgba($color, 0.5);
+* {
+ margin: 0;
+ padding: 0;
 }
