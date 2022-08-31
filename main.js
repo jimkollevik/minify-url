@@ -26,7 +26,7 @@ function geturl() {
 
 function copyUrl() {
 	var copyText = document.getElementById("shortUrl");
-	copyText.select();
-	copyText.setSelectionRange(0, 99999); /* For mobile devices */
-	navigator.clipboard.writeText(copyText.value);
+	copyUrl.select();
+	copyUrl.setSelectionRange(0, 99999); /* For mobile devices */
+	navigator.clipboard.writeText(copyUrl.value);
 }
