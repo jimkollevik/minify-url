@@ -2,7 +2,7 @@ function geturl() {
  var url = document.getElementById("urlinput").value;
  var protocol_ok = url.startsWith("http://") || url.startsWith("https://") || url.startsWith("ftp://");
    if(!protocol_ok) {
-	   console.log("Please use an URL that starts with either http://, https:// or ftp://")
+	   $("#shorturl").append("Please use an URL that starts with either http://, https:// or ftp://")
   	}
    else {
     var url = "https://api.shrtco.de/v2/shorten?url=" + url;
@@ -24,11 +24,9 @@ function geturl() {
   }
 }
 
-$("button").on("touchsart mousedown", function () {
-	$(this).addClass("clicked");
-});
-
-$("button").on("touchend mouseup", function () {
-	$(this).removeClass("clicked");
-	$(this).blur();
-});
+function copyUrl() {
+	var copyText = getElementById("shortUrl");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); /* For mobile devices */
+	navigator.clipboard.writeText(copyText.value);
+}
