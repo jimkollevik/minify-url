@@ -24,9 +24,10 @@ function geturl() {
   }
 }
 
-function copyUrl() {
-	var copyText = document.getElementById("shortUrl");
-	copyUrl.select();
-	copyUrl.setSelectionRange(0, 99999); /* For mobile devices */
-	navigator.clipboard.writeText(copyUrl.value);
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
 }
