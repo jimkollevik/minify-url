@@ -2,6 +2,10 @@
  margin: 0;
  padding: 0;
 }
+body {
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+}
 .wrapper {
  width: 50%;
  margin: 10% auto;
@@ -14,19 +18,40 @@
  text-align: center;
  font-size: 3em;
 }
+#shortUrl:hover {
+  color: #000;
+  cursor: pointer;
+}
 #urlinput {
  width: 80%;
  height: 30px;
- border: 3px solid black;
- padding: 0 5px 0 5px;
+ border: none;
+ border-bottom: 1px solid #333;
+ padding: 0 0 0 5px;
+ font-size: 1.5em;
 }
 button {
  width: 17%;
  height: 35px;
- border: 3px solid black;
- background-color: white;
+ border: none;
+ background-color: #333;
+ color: #fff;
+ border-radius: 5px;
+ font-family: 'Lato', sans-serif;
+ font-weight: bold;
 }
 button:hover {
- color: white;
- background-color: black;
+ color: #333;
+ cursor: pointer;
+ background-color: #fff;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+  }
+input:focus::placeholder {
+  color: transparent;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
