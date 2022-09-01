@@ -5,18 +5,21 @@
 	<meta charset="utf-8">
 	<meta content="exercise to create a URL shortener">
 	<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
 <div class="wrapper">
   <div class="content">
     <div class="row">
-      <h5 id="shortUrl" onclick="copyUrl()">
+      <h5 id="shortUrl" onclick="copyToClipboard('#shortUrl')">
       </h5>
     </div><!-- end row -->
     <div class="row">
-      <input type="url" id="urlinput">
-      <button onclick="geturl()">Generate!</button>
+      <input type="url" id="urlinput" placeholder="Your URL">
+      <button onclick="geturl()">Make it short!</button>
     </div><!-- end row -->
   </div><!-- end content -->
 </div><!-- end wrapper -->
