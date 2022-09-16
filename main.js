@@ -26,18 +26,17 @@ function geturl() {
   }
 }
 
-function copyUrl() {
-  // Get the text field
-  var copyText = document.getElementById("shortUrl");
+const shortUrl = document.getElementById("shortUrl");
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
+shortUrl.onclick = function() {
+  document.execCommand("copy");
 }
+
+shortUrl.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", shortUrl.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
 
