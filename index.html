@@ -14,11 +14,11 @@
 
 <div class="left">
   <div class="content">
-      <h2>Welcome</h2>
-      <p>Url:s can be looong, here you can do something about that.<br>Paste a long URL and click the button to get a short link.</p>
-	  <h2 id="shortUrl"></h2>
+      <h2 class="switch">Welcome</h2><h2 id="shortUrl" onclick="copyUrl()"></h2>
+      <p class="switch">Url:s can be looong, here you can do something about that.<br>Paste a long URL and click the button to get a short link.</p>
+      <p id="newUrl"></p>
           <input type="url" id="urlinput" placeholder="Paste a long url here">
-          <button onclick="geturl()">Generate short URL</button>
+          <button onclick="geturl()" id="btn">Generate short URL</button>
   </div><!-- end content -->
 </div><!-- end left -->
 <div class="right">

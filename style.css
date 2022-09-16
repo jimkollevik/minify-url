@@ -75,3 +75,9 @@ a {
 form {
 	text-align: center;
 }
+#shortUrl {
+	cursor: pointer;
+}
+#shortUrl:hover {
+	color: #0712DE;
+}
