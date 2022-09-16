@@ -8,24 +8,27 @@
 	<link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
-<div class="wrapper">
+<div class="left">
   <div class="content">
-    <div class="row">
-      <h2>Paste a long url to shorten.</h2>
+      <h2>Welcome</h2>
+      <p>Url:s can be looong, here you can do something about that.<br>Paste a long URL and click the button to get a short link.</p>
       <h2 id="shortUrl" onclick="copyToClipboard('#shortUrl')">
-      </h5>
-    </div><!-- end row -->
-    <div class="row">
-      <input type="url" id="urlinput" placeholder="Your URL">
-      <button onclick="geturl()">Make it short!</button>
-    </div><!-- end row -->
+        <form>
+          <input type="url" id="urlinput" placeholder="Paste a long url here">
+          <button onclick="geturl()">Generate short URL</button>
+        </form>
   </div><!-- end content -->
-</div><!-- end wrapper -->
-
+</div><!-- end left -->
+<div class="right">
+  <div class="content">
+    <h2>Shorten<br>an url</h2>
+    <p>Generate a short url from a long url. The service is built on the api api.shrtco. Read the specifications here: <a href="https://shrtco.de/docs" target="_blank">https://shrtco.de/docs</a></p>
+  </div><!-- end content -->
+</div><!-- end right -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="main.js"></script>
 	
